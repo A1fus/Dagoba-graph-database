@@ -48,3 +48,15 @@ Dagoba.error = function(msg) {
     console.log(msg)
     return false
 }
+
+Dagoba.Q = {}
+
+Dagoba.query = function (graph) {
+    var query = Object.create(Dagoba.Q)
+    query.graph = graph
+    query.state = []
+    query.program = []
+    query.gremlins = []
+
+    return query
+}
